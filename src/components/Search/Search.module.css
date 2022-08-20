@@ -1,0 +1,10 @@
+.Input {
+    width: 90%;
+}
+
+.Search {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
