@@ -8,6 +8,7 @@ const initialState = {
   list: [],
   prev: "",
   next: "",
+  selectedPokemon: {},
 };
 
 export const pokemonSlice = createSlice({
@@ -28,11 +29,15 @@ export const pokemonSlice = createSlice({
       state.loading = false;
       state.hasErrors = false;
     },
+    setSelectedPokemon: (state, { payload }) => {
+      state.selectedPokemon = payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setLoading, setError, saveList } = pokemonSlice.actions;
+export const { setLoading, setError, saveList, setSelectedPokemon } =
+  pokemonSlice.actions;
 
 // Selector
 export const pokemonSelector = (state) => state.pokemon;

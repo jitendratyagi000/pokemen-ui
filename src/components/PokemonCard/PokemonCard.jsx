@@ -1,6 +1,6 @@
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, clickHandler }) => {
   return (
-    <div className="col">
+    <div className="col" onClick={() => clickHandler(pokemon)}>
       <div className="card shadow-sm">
         <img
           alt={pokemon.name}
