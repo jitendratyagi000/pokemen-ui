@@ -5,7 +5,7 @@ import {
   saveSortedList,
   savePerPageItem,
   fetchList,
-  searchPokemon
+  saveSearchQuery,
 } from "../slices/pokemonSlice";
 
 import PokemonList from "../components/PokemonList/PokemonList";
@@ -24,7 +24,7 @@ const Home = () => {
   };
 
   const perPageChangeHandler = (pageCount) => {
-    console.log(pageCount);
+    console.log("test");
     dispatch(savePerPageItem(pageCount));
     dispatch(fetchList());
   };
@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   const searchHandler = (searchQuery) => {
-    dispatch(searchPokemon({searchQuery, list}));
+    dispatch(saveSearchQuery(searchQuery));
   };
   return (
     <div className="py-5 bg-light">

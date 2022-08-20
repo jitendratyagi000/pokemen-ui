@@ -1,8 +1,8 @@
 import axios from "axios";
 
+import { createSlice } from "@reduxjs/toolkit";
 import { sortArray } from "../utils";
 
-import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   loading: false,
@@ -13,6 +13,7 @@ const initialState = {
   selectedPokemon: {},
   sortBy: { key: "name", direction: "asc" },
   perPageItem: 10,
+  searchQuery: "",
 };
 
 export const pokemonSlice = createSlice({
@@ -56,21 +57,15 @@ export const pokemonSlice = createSlice({
 
       state.sortBy = {
         key: payload.key,
-        direction: direction,
+        direction,
       };
       state.list = sortArray(payload.key, direction, payload.list);
     },
     savePerPageItem: (state, { payload }) => {
       state.perPageItem = payload;
     },
-    searchPokemon: (state, { payload }) => {
-      state.list = payload.list.filter(
-        (pokemon) =>
-          pokemon.name.includes(payload.searchQuery.toLowerCase()) ||
-          pokemon.abilities.some((item) =>
-            item.ability.name.includes(payload.searchQuery.toLowerCase())
-          )
-      );
+    saveSearchQuery: (state, { payload }) => {
+      state.searchQuery = payload;
     },
   },
 });
@@ -83,7 +78,7 @@ export const {
   setSelectedPokemon,
   saveSortedList,
   savePerPageItem,
-  searchPokemon,
+  saveSearchQuery,
 } = pokemonSlice.actions;
 
 // Selector
@@ -106,7 +101,7 @@ export function fetchList(apiurl) {
       );
 
       const promises = response.data.results.map(
-        async (pokemon) => await axios(`${pokemon.url}`)
+        async (pokemon) => axios(`${pokemon.url}`)
       );
 
       const pokemonDetails = await Promise.all(promises);

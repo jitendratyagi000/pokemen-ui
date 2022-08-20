@@ -8,8 +8,11 @@ import { Link } from "react-router-dom";
 const Details = () => {
   const { selectedPokemon: pokemon } = useSelector(pokemonSelector);
   return (
-    <div className="py-5 bg-light">
+    <div className="py-1 bg-light">
       <div className="container">
+        <h1 className="text-center text-primary text-capitalize">
+          {pokemon.name}
+        </h1>
         <div className="row">
           <Link to="/">Go to list page</Link>
         </div>
