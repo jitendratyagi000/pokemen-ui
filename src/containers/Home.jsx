@@ -3,8 +3,8 @@ import Search from "../components/Search/Search";
 
 const Home = () => {
   return (
-    <div class="py-5 bg-light">
-      <div class="container">
+    <div className="py-5 bg-light">
+      <div className="container">
         <Search />
         <PokemonList />
       </div>

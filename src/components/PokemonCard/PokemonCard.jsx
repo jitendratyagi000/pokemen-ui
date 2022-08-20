@@ -1,40 +1,27 @@
-const PokemonCard = () => {
+const PokemonCard = ({ pokemon }) => {
   return (
-    <div class="col">
-      <div class="card shadow-sm">
-        <svg
-          class="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: Thumbnail"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#55595c"></rect>
-          <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-            Thumbnail
-          </text>
-        </svg>
-
-        <div class="card-body">
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
+    <div className="col">
+      <div className="card shadow-sm">
+        <img
+          alt={pokemon.name}
+          src={pokemon.sprites.other["official-artwork"]["front_default"]}
+        />
+        <div className="card-body text-center">
+          <h3 className="text-center text-primary text-capitalize">
+            {pokemon.name}
+          </h3>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">
+              <span className="text-primary">Height</span>: {pokemon.height}
+            </li>
+            <li className="list-group-item">
+              <span className="text-primary">Weight</span>: {pokemon.weight}
+            </li>
+            <li className="list-group-item">
+              <span className="text-primary">Abilities</span>:{" "}
+              {pokemon.abilities.map((item) => item.ability.name).join(", ")}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
