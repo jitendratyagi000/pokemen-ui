@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import {
   pokemonSelector,
-  fetchRecipes,
+  fetchList,
   setSelectedPokemon,
 } from "../../slices/pokemonSlice";
 
@@ -21,7 +21,7 @@ const PokemonList = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchRecipes());
+    dispatch(fetchList());
   }, [dispatch]);
 
   return (
