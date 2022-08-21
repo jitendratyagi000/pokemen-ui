@@ -1,3 +1,13 @@
+# Instruction to run the project
+* Clone the repository
+* run `npm install` command in source code root directory
+* run `npm run start` to start the project on dev mode
+* run `npm run test` to run the unit tests
+
+
+> **_NOTE:_**  The test covergae is not 100%.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
