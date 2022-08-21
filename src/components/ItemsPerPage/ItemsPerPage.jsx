@@ -10,6 +10,7 @@ const ItemsPerPage = ({ perPageItem, handleChange }) => {
             <select
 					className="form-select"
 					id="itemperpage"
+                    data-testid="itemperpage"
 					value={perPageItem}
 					onChange={(event) => handleChange(event.target.value)}
 				>
