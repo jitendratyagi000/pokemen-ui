@@ -1,7 +1,9 @@
+import React from "react";
+
 const SortBy = ({ sortBy, handleClick }) => {
   return (
     <div>
-      <label>Sory By:</label>
+      <strong>Sory By:</strong>
       <div className="btn-group ms-2" role="group" aria-label="Basic example">
         <button
           onClick={() => handleClick("name")}
@@ -12,10 +14,10 @@ const SortBy = ({ sortBy, handleClick }) => {
         >
           Name{" "}
           {sortBy.key === "name" && sortBy.direction === "asc" && (
-            <i className="bi bi-sort-alpha-down"></i>
+            <i className="bi bi-sort-alpha-down" />
           )}
           {sortBy.key === "name" && sortBy.direction === "desc" && (
-            <i className="bi bi-sort-alpha-up"></i>
+            <i className="bi bi-sort-alpha-up" />
           )}
         </button>
         <button
@@ -27,10 +29,10 @@ const SortBy = ({ sortBy, handleClick }) => {
         >
           Height{" "}
           {sortBy.key === "height" && sortBy.direction === "asc" && (
-            <i className="bi bi-sort-alpha-down"></i>
+            <i className="bi bi-sort-alpha-down" />
           )}
           {sortBy.key === "height" && sortBy.direction === "desc" && (
-            <i className="bi bi-sort-alpha-up"></i>
+            <i className="bi bi-sort-alpha-up" />
           )}
         </button>
         <button
@@ -42,10 +44,10 @@ const SortBy = ({ sortBy, handleClick }) => {
         >
           Weight{" "}
           {sortBy.key === "weight" && sortBy.direction === "asc" && (
-            <i className="bi bi-sort-alpha-down"></i>
+            <i className="bi bi-sort-alpha-down" />
           )}
           {sortBy.key === "weight" && sortBy.direction === "desc" && (
-            <i className="bi bi-sort-alpha-up"></i>
+            <i className="bi bi-sort-alpha-up" />
           )}
         </button>
       </div>

@@ -1,9 +1,10 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Tabs, Tab } from "react-bootstrap";
 
 import InformationRow from "../components/InformationRow/InformationRow";
 import { pokemonSelector } from "../slices/pokemonSlice";
-import { Link } from "react-router-dom";
 
 const Details = () => {
   const { selectedPokemon: pokemon } = useSelector(pokemonSelector);
@@ -21,7 +22,7 @@ const Details = () => {
             <img
               className="avatar center-block"
               alt={pokemon.name}
-              src={pokemon?.sprites?.other["official-artwork"]["front_default"]}
+              src={pokemon?.sprites?.other["official-artwork"].front_default}
             />
           </div>
           <div className="col-md-6">
@@ -63,7 +64,7 @@ const Details = () => {
                         key={item.stat.name}
                         label={item.stat.name.toUpperCase()}
                         items={[item]}
-                        render={(item) => item.base_stat}
+                        render={(stat) => stat.base_stat}
                       />
                     ))}
                   </ul>

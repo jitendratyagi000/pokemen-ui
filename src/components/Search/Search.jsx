@@ -1,3 +1,5 @@
+import React from "react";
+
 const Search = ({value, changeHandler}) => {
   return (
     <div className="row mb-5">

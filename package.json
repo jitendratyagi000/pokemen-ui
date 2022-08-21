@@ -40,7 +40,7 @@
       "not dead",
       "not op_mini all"
     ],
-    "development": [
+    "development": [ 
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "eslint": "^8.22.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",

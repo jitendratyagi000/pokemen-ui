@@ -1,4 +1,6 @@
-const Header = () => {
+import React from "react";
+
+const Header = () => { 
   return (
     <header>
       <div className="navbar navbar-dark bg-dark shadow-sm">

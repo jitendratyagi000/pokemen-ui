@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
@@ -24,7 +25,6 @@ const Home = () => {
   };
 
   const perPageChangeHandler = (pageCount) => {
-    console.log("test");
     dispatch(savePerPageItem(pageCount));
     dispatch(fetchList());
   };
@@ -33,8 +33,8 @@ const Home = () => {
     dispatch(fetchList(apiurl));
   };
 
-  const searchHandler = (searchQuery) => {
-    dispatch(saveSearchQuery(searchQuery));
+  const searchHandler = (query) => {
+    dispatch(saveSearchQuery(query));
   };
   return (
     <div className="py-5 bg-light">

@@ -1,3 +1,5 @@
+import React from "react";
+
 const Pagiantion = ({ prev, next, handleChange }) => {
   return (
     <nav aria-label="...">
