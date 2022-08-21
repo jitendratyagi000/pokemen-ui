@@ -3,7 +3,6 @@ import axios from "axios";
 import { createSlice } from "@reduxjs/toolkit";
 import { sortArray } from "../utils";
 
-
 const initialState = {
   loading: false,
   hasErrors: false,

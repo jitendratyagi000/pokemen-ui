@@ -37,7 +37,7 @@ const Home = () => {
     dispatch(saveSearchQuery(query));
   };
   return (
-    <div className="py-5 bg-light">
+    <div className="py-3 bg-light">
       <div className="container">
         <Search value={searchQuery} changeHandler={searchHandler} />
         <div className="row">

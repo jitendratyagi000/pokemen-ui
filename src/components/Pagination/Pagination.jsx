@@ -2,7 +2,7 @@ import React from "react";
 
 const Pagiantion = ({ prev, next, handleChange }) => {
   return (
-    <nav aria-label="...">
+    <nav>
       <ul className="pagination pagination-md">
         <li className="page-item active" aria-current="page">
           <button
