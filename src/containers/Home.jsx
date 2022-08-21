@@ -41,16 +41,16 @@ const Home = () => {
       <div className="container">
         <Search value={searchQuery} changeHandler={searchHandler} />
         <div className="row">
-          <div className="col">
+          <div className="col-lg-4 col-12 d-flex justify-content-end justify-content-lg-start">
             <SortBy sortBy={sortBy} handleClick={sortHandler} />
           </div>
-          <div className="col">
+          <div className="col-lg-4 col-12-4 mt-2 mt-lg-0">
             <ItemsPerPage
               perPageItem={perPageItem}
               handleChange={perPageChangeHandler}
             />
           </div>
-          <div className="col d-flex justify-content-md-end">
+          <div className="col-lg-4 mt-2 mt-lg-0 col-12 d-flex justify-content-end">
             <Pagiantion
               prev={prev}
               next={next}
@@ -59,7 +59,7 @@ const Home = () => {
           </div>
         </div>
         <PokemonList />
-        <div className="d-flex justify-content-md-end">
+        <div className="d-flex justify-content-end mt-2">
           <Pagiantion
             prev={prev}
             next={next}

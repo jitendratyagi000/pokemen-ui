@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = ({value, changeHandler}) => {
   return (
-    <div className="row mb-5">
+    <div className="row mb-3">
       <div className="col">
         <input
           value={value}

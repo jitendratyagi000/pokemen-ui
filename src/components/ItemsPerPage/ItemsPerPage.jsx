@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemsPerPage = ({ perPageItem, handleChange }) => {
 	return (
-		<div className="input-group mb-3">
+		<div className="input-group">
             { /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }
 			<label className="input-group-text" htmlFor="itemperpage">
 				Items Per Page

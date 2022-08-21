@@ -3,7 +3,7 @@ import React from "react";
 const SortBy = ({ sortBy, handleClick }) => {
   return (
     <div>
-      <strong>Sory By:</strong>
+      <span>Sort:</span>
       <div className="btn-group ms-2" role="group" aria-label="Basic example">
         <button
           onClick={() => handleClick("name")}
